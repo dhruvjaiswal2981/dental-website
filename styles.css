@@ -124,13 +124,14 @@ body {
   }
 
   .nav ul {
-    flex-direction: column;
+    flex-direction: column; /* Display items in a column */
     gap: 10px;
     padding: 15px 0;
+    display: block; /* Ensure the nav is displayed */
   }
 
   .action-buttons {
-    width: 270px;
+    width: 100%;
     justify-content: space-between;
     margin-top: 10px;
   }
@@ -145,7 +146,6 @@ body {
 @media (max-width: 480px) {
   .header {
     padding: 10px;
-    
   }
 
   .logo-text {
@@ -157,14 +157,7 @@ body {
   }
 
   .nav ul {
-    display: none; 
-  }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    font-size: 24px;
-    color: #5a4335;
+    display: block; /* Display items in a block for mobile */
   }
 
   .action-buttons {
@@ -178,7 +171,6 @@ body {
     padding: 10px;
   }
 }
-
 
 /* Health Plan section styles */
 .health-plan {
@@ -738,7 +730,7 @@ h1 {
   text-decoration: underline;
   font-weight: 700;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #FFF9F4;
 }
 .image-container {
   display: flex;
@@ -792,7 +784,7 @@ h1 {
   font-weight: 700;
   width: 200px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #F5F8FF;
 }
 
 /* Tablet Styles */
