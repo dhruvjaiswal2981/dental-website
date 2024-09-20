@@ -119,8 +119,20 @@ body {
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 15px;
+  }
+
+  .logo-text {
+    font-size: 35px;
+  }
+
+  .logo-subtext {
+    font-size: 18px;
+  }
+
+  .nav ul li:not(:last-child)::after {
+    content: '';
   }
 
   .nav ul {
@@ -128,6 +140,15 @@ body {
     gap: 10px;
     padding: 15px 0;
     display: block; /* Ensure the nav is displayed */
+  }
+
+  .nav ul li{
+    padding: 2px;
+  }
+
+  .nav ul li a{
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .action-buttons {
@@ -146,14 +167,6 @@ body {
 @media (max-width: 480px) {
   .header {
     padding: 10px;
-  }
-
-  .logo-text {
-    font-size: 20px;
-  }
-
-  .logo-subtext {
-    font-size: 10px;
   }
 
   .nav ul {
