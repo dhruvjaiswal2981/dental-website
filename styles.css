@@ -130,7 +130,7 @@ body {
   }
 
   .action-buttons {
-    width: 100%;
+    width: 270px;
     justify-content: space-between;
     margin-top: 10px;
   }
@@ -418,7 +418,7 @@ h1 {
   }
 
   .stats-item {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     align-items: center;
   }
 
@@ -458,7 +458,7 @@ h1 {
   }
 
   .stats-item {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     text-align: center;
   }
 
@@ -738,6 +738,7 @@ h1 {
   text-decoration: underline;
   font-weight: 700;
   cursor: pointer;
+  background-color: #fff;
 }
 .image-container {
   display: flex;
@@ -791,6 +792,7 @@ h1 {
   font-weight: 700;
   width: 200px;
   cursor: pointer;
+  background-color: #fff;
 }
 
 /* Tablet Styles */
