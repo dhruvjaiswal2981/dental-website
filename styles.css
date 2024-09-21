@@ -128,11 +128,11 @@ body {
   }
 
   .logo-text {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .logo-subtext {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .nav ul {
@@ -140,12 +140,13 @@ body {
     padding: 0; /* Remove padding to eliminate space */
     display: block; /* Ensure nav items are displayed */
     text-align: center; /* Center align nav items */
+    margin: 0; /* Remove bottom spacing under the nav */
   }
 
   .nav ul li {
     width: 100%; /* Ensure each item takes full width */
-    margin: 0; /* Remove any existing margin to avoid spacing */
-    padding: 5px 0; /* Adjust padding to create a minimal clickable area */
+    margin: 0; /* Remove margin between nav items */
+    padding: 0; /* Remove padding between nav items */
   }
 
   .nav ul li a {
@@ -154,7 +155,6 @@ body {
     display: block; /* Ensure links take full width */
     width: 100%;
     text-align: center; /* Center text in each item */
-    padding: 10px 0; /* Minimal padding to maintain button-like appearance */
   }
 
   .nav ul li:not(:last-child)::after {
@@ -189,6 +189,7 @@ body {
     text-align: center; /* Ensure items are centered on mobile */
     display: block;
     padding: 0; /* Remove any padding */
+    margin: 0; /* Remove bottom spacing */
   }
 
   .nav ul li {
@@ -201,7 +202,6 @@ body {
     display: block;
     font-size: 18px;
     text-align: center; /* Ensure centered alignment */
-    padding: 10px 0; /* Minimal padding for clickable area */
   }
 
   .action-buttons {
