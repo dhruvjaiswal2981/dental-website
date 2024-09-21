@@ -1314,7 +1314,7 @@ h1 {
 }
 
 header {
-  background-color: #f5f5f5;
+  background-color: #FFF9F4;
   padding: 1rem 0;
   text-align: center;
 }
@@ -1826,7 +1826,7 @@ footer {
 }
 
 
-/* Popup Modal Styles */
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -1835,87 +1835,275 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
 }
 
 .modal-content {
   background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 40%;
+  padding: 30px;
+  border-radius: 40px;
+  width: 600px;
   text-align: center;
 }
 
 .close-btn {
-  float: right;
   font-size: 24px;
+  float: right;
   cursor: pointer;
-  margin-right: 10px;
+  color: grey;
 }
 
-h2, h3 {
-  color: #333;
+/* Form Styles */
+.modal-content h2 {
+  color: #303030;
+  text-align: left;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Raleway";
 }
 
-p {
-  font-size: 14px;
+.modal-content p {
   color: #666;
+  font-size: 14px;
+  text-align: left;
+  font-family: "Raleway";
 }
 
-/* Form Styling */
+.modal-content h3 {
+  color: #e07a2b;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Raleway";
+  font-weight: 700;
+}
+
+
+/* Container for the OTP input and button */
+.otp-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  overflow: hidden;
+  width: max-content;
+}
+
+/* OTP input field */
+.otp-input {
+  border: none !important;
+  padding: 10px 20px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 50px 0 0 50px;
+  flex: 1;
+  width: 180px;
+}
+
+/* Verify button */
+.verify-btn {
+  background-color: #ff8c32; /* Match the orange color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+}
+
+
+.verify-btn:hover {
+  background-color: #e07a2b;
+}
+
+
 .modal-form {
   margin-top: 20px;
 }
 
 .input-group {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px;
+  margin-right: 10px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+
+.appointment-form {
+  display: flex;
   flex-direction: column;
+}
+
+.form-group {
+  display: flex;
   gap: 10px;
   margin-bottom: 15px;
 }
 
-.input-group input {
-  padding: 10px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  font-size: 16px;
+.input-field {
+  display: flex;
+  flex: 1;
+  position: relative;
 }
 
-.verify-btn {
-  background-color: orange;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-top: 10px;
+.input-field input,
+.input-field select {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+.consent {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #717171;
+}
+
+.consent input {
+  margin-top: 4px;
+}
+
+.submit-btn:hover {
+  background-color: #e65a00;
 }
 
 .submit-btn {
-  background-color: orange;
+  background-color: #e07a2b;
   color: white;
+  padding: 12px 40px;
+  border-radius: 30px;
   border: none;
-  padding: 10px 40px;
-  border-radius: 20px;
   cursor: pointer;
-  margin-top: 20px;
+  font-size: 16px;
 }
+  
 
-/* Responsive Design */
+/* Responsive design for tablet */
 @media (max-width: 768px) {
-  .modal-content {
-    width: 80%;
+  .otp-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 45px;
   }
-}
 
-@media (max-width: 480px) {
+  .otp-input, .verify-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .otp-input {
+    width: 130px;
+  }
+
+  .verify-btn {
+    padding: 10px 15px;
+  }
+
   .modal-content {
     width: 90%;
   }
 
-  .input-group {
+  .form-group, .input-group {
     flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .input-field, .input-group input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .submit-btn{
+    margin-top: 10px;
+  }
+
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  .otp-container {
+    flex-direction: column; /* Stack input and button vertically */
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .otp-input, .verify-btn {
+    width: 100%;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 14px;
+    padding: 12px 0;
+  }
+
+  .verify-btn {
+    margin-top: 10px; /* Add space between input and button */
+  }
+}
+
+.popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.popup img {
+  width: 100%; /* Adjust size if needed */
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .popup {
+    width: 80%; /* Adjust the popup width for tablets */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup {
+    width: 95%; /* Adjust the popup width for mobile */
+    padding: 10px;
   }
 }

@@ -26,30 +26,111 @@
     </nav>
     <div class="action-buttons">
       <button class="btn book-appointment" id="openModal">Book Appointment</button>
-      <button class="btn help"><i class="fas fa-phone-alt"></i> Help? <i class="fas fa-chevron-down"></i></button>
+      <button class="btn help" id="helpBtn">Help?</button>
     </div>
   </header>
 
-  <!-- Popup Modal -->
-  <div class="modal" id="modal">
+  <div class="popup" id="myPopup">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <img src="images/contact.png" alt="Contact Details"> 
+  </div>
+
+  <div class="modal" id="modal1">
     <div class="modal-content">
-      <span class="close-btn" id="closeModal">&times;</span>
+      <span class="close-btn" id="closeModal1">&times;</span>
       <h2>Book Your Consultation at Clove Dental</h2>
-      <p>Fill out the form below to book your consultation.</p>
+      <p>Please fill out the form below to book a consultation with Clove Dental.</p>
 
       <!-- Form Section -->
       <h3>Step 1: Personal Details</h3>
-      <form class="modal-form">
+      <form class="modal-form" id="personalDetailsForm">
         <div class="input-group">
           <input type="text" placeholder="Full Name" required />
           <input type="email" placeholder="Email" required />
         </div>
         <div class="input-group">
           <input type="text" placeholder="Mobile" required />
-          <input type="text" placeholder="Enter OTP" required />
-          <button type="button" class="verify-btn">Verify</button>
+          <div class="otp-container">
+            <input type="text" placeholder="Enter OTP" class="otp-input" />
+            <button type="button" class="verify-btn">Verify</button>
+          </div>          
         </div>
-        <button type="submit" class="submit-btn">Next</button>
+        
+        <button type="button" class="submit-btn" id="nextToStep2">Next</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Second Modal (Appointment Details) -->
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal2">&times;</span>
+      <h2>Clove Dental Corporate Consultation</h2>
+      <p>Welcome! If your company is partnered with Clove Dental, fill out this form to book your consultation. We're excited to care for your smile!</p>
+
+      <h3>Step 2: Appointment Details</h3>
+
+      <!-- Appointment Form -->
+      <form class="appointment-form">
+        <div class="form-group">
+          <div class="input-field">
+            <select class="concern-input">
+              <option>Select City</option>
+              <option>Ahmedabad</option>
+              <option>Amritsar</option>
+              <option>Bengaluru</option>
+              <option>Chandigarh</option>
+              <option>Chennai</option>
+              <option>Delhi</option>
+              <option>Faridabad</option>
+              <option>Ghaziabad</option>
+              <option>Greater Noida</option>
+              <option>Gurgaon</option>
+              <option>Hyderabad</option>
+              <option>Jaipur</option>
+              <!-- Add other options here -->
+            </select>
+          </div>
+          <div class="input-field">
+            <select class="clinic-input">
+              <option>Select Clinic</option>
+              <!-- Add other options here -->
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-field">
+            <input type="datetime-local" placeholder="Select Date & Time" class="date-input" required>
+          </div>
+          <div class="input-field">
+            <select class="concern-input">
+              <option>Select Concern</option>
+              <option value="root-canal">Root Canal</option>
+              <option value="braces">Braces</option>
+              <option value="teeth-whitening">Teeth Whitening</option>
+              <option value="invisible-braces">Invisible Braces</option>
+              <option value="kids-dentistry">Kids Dentistry</option>
+              <option value="crowns-bridges">Crown & Bridges</option>
+              <option value="dental-checkup">Dental Checkup</option>
+              <option value="smile-makeover">Smile Makeover</option>
+              <option value="gum-treatment">Gum Treatment</option>
+              <option value="wisdom-tooth">Wisdom Tooth/option>
+              <option value="laser-dentistry">Laser Dentistry</option>
+              <option value="dentures">Dentures</option>
+              <!-- Add other options here -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Consent Checkbox -->
+        <div class="consent">
+          <input type="checkbox" id="consent" required>
+          <label for="consent">By clicking submit, I hereby consent to receive communication from Clove Dental regarding my appointment and other dental services.</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Submit</button>
       </form>
     </div>
   </div>
@@ -370,7 +451,7 @@
   <section class="dry-section">
     <header>
       <h1>Journey Through Knowledge: Blog Hub</h1>
-  </header>
+    </header>
 
   
   <nav class="nav nav-card">
@@ -583,23 +664,78 @@
     </footer>
     
     <script>
-      const openModal = document.getElementById('openModal');
-      const closeModal = document.getElementById('closeModal');
-      const modal = document.getElementById('modal');
-    
-      openModal.onclick = function() {
-        modal.style.display = "flex";
-      }
-    
-      closeModal.onclick = function() {
-        modal.style.display = "none";
-      }
-    
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
+      // Get modal elements
+        const openModal = document.getElementById('openModal');
+        const closeModal1 = document.getElementById('closeModal1');
+        const closeModal2 = document.getElementById('closeModal2');
+        const modal1 = document.getElementById('modal1');
+        const modal2 = document.getElementById('modal2');
+
+        // Get the 'Next' button from the first modal
+        const nextToStep2 = document.getElementById('nextToStep2');
+
+        // Open the first modal when the "Next" button is clicked
+        openModal.onclick = function() {
+          modal1.style.display = 'flex';
         }
-      }
+
+
+        // Close the first modal
+        closeModal1.onclick = function() {
+          modal1.style.display = 'none';
+        }
+
+        // Close the second modal
+        closeModal2.onclick = function() {
+          modal2.style.display = 'none';
+        }
+
+        // Transition to the second modal when "Next" button is clicked
+        nextToStep2.onclick = function() {
+          modal1.style.display = 'none';
+          modal2.style.display = 'flex';
+        }
+
+        // Close modals when clicking outside of them
+        window.onclick = function(event) {
+          if (event.target == modal1) {
+            modal1.style.display = 'none';
+          } else if (event.target == modal2) {
+            modal2.style.display = 'none';
+          }
+        }
+
+        // Get elements
+        const helpBtn = document.getElementById('helpBtn');
+        const popup = document.getElementById('myPopup');
+        const closeModal = document.getElementById('closeModal');
+        const overlay = document.createElement('div'); // Create overlay
+        overlay.classList.add('popup-overlay'); // Add the class
+
+        // Append overlay to body
+        document.body.appendChild(overlay);
+
+        // Function to show the popup and overlay
+        helpBtn.onclick = function() {
+          popup.style.display = 'block';
+          overlay.style.display = 'block'; // Show the overlay
+        };
+
+        // Function to hide the popup and overlay
+        closeModal.onclick = function() {
+          popup.style.display = 'none';
+          overlay.style.display = 'none'; // Hide the overlay
+        };
+
+        // Close popup when clicking outside the popup
+        window.onclick = function(event) {
+          if (event.target === overlay) {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+          }
+        };
+
+
     </script>
     
 
