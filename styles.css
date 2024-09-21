@@ -137,17 +137,16 @@ body {
 
   .nav ul {
     flex-direction: column; /* Stack navigation items in a column */
-    padding: 15px 0;
+    padding: 0; /* Remove padding to eliminate space */
     display: block; /* Ensure nav items are displayed */
     text-align: center; /* Center align nav items */
   }
 
   .nav ul li {
     width: 100%; /* Ensure each item takes full width */
+    margin: 0; /* Remove any existing margin to avoid spacing */
+    padding: 5px 0; /* Adjust padding to create a minimal clickable area */
   }
-
-  /* Remove gap between "Treatments" and "Dental Plans", "Careers" and "Find a Clinic" */
-  
 
   .nav ul li a {
     font-size: 20px;
@@ -155,6 +154,7 @@ body {
     display: block; /* Ensure links take full width */
     width: 100%;
     text-align: center; /* Center text in each item */
+    padding: 10px 0; /* Minimal padding to maintain button-like appearance */
   }
 
   .nav ul li:not(:last-child)::after {
@@ -188,20 +188,20 @@ body {
     flex-direction: column;
     text-align: center; /* Ensure items are centered on mobile */
     display: block;
+    padding: 0; /* Remove any padding */
   }
-
-  
-  
 
   .nav ul li {
     width: 100%;
-    padding: 10px 0;
+    padding: 0; /* Remove padding between nav items */
+    margin: 0; /* Remove margin between nav items */
   }
 
   .nav ul li a {
     display: block;
     font-size: 18px;
     text-align: center; /* Ensure centered alignment */
+    padding: 10px 0; /* Minimal padding for clickable area */
   }
 
   .action-buttons {
