@@ -137,7 +137,6 @@ body {
 
   .nav ul {
     flex-direction: column; /* Stack navigation items in a column */
-    gap: 2px; /* Reduced the gap between nav items to 5px */
     padding: 15px 0;
     display: block; /* Ensure nav items are displayed */
     text-align: center; /* Center align nav items */
@@ -184,7 +183,6 @@ body {
 
   .nav ul {
     flex-direction: column;
-    gap: 2px; /* Reduced the gap between nav items to 5px */
     text-align: center; /* Ensure items are centered on mobile */
     display: block;
   }
