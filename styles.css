@@ -131,30 +131,37 @@ body {
     font-size: 18px;
   }
 
+  .nav ul {
+    flex-direction: column; /* Stack navigation items in a column */
+    gap: 10px;
+    padding: 15px 0;
+    display: block; /* Ensure nav items are displayed */
+    text-align: center; /* Center align nav items */
+  }
+
+  .nav ul li {
+    padding: 10px 0;
+    width: 100%; /* Ensure each item takes full width */
+  }
+
+  .nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block; /* Ensure links take full width */
+    width: 100%;
+    text-align: center; /* Center text in each item */
+  }
+
   .nav ul li:not(:last-child)::after {
     content: '';
   }
-
-  .nav ul {
-    flex-direction: column; /* Display items in a column */
-    gap: 10px;
-    padding: 15px 0;
-    display: block; /* Ensure the nav is displayed */
-  }
-
-  .nav ul li{
-    padding: 2px;
-  }
-
-  .nav ul li a{
-    font-size: 20px;
-    font-weight: 600;
-  }
+  
 
   .action-buttons {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center; /* Center align action buttons */
     margin-top: 10px;
+    gap: 15px;
   }
 
   .btn {
@@ -170,12 +177,27 @@ body {
   }
 
   .nav ul {
-    display: block; /* Display items in a block for mobile */
+    flex-direction: column;
+    gap: 10px;
+    text-align: center; /* Ensure items are centered on mobile */
+    display: block;
+  }
+
+  .nav ul li {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav ul li a {
+    display: block;
+    font-size: 18px;
+    text-align: center; /* Ensure centered alignment */
   }
 
   .action-buttons {
     flex-direction: column;
     width: 100%;
+    align-items: center; /* Center align action buttons */
     gap: 10px;
   }
 
