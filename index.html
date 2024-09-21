@@ -20,15 +20,39 @@
         <li><a href="#treatments">Treatments</a></li>
         <li><a href="#dental-plans">Dental Plans</a></li>
         <li><a href="#our-doctors">Our Doctors</a></li>
-        <li><a href="#Careers">Careers</a></li>
+        <li><a href="#careers">Careers</a></li>
         <li><a href="#find-a-clinic">Find a Clinic</a></li>
       </ul>
     </nav>
     <div class="action-buttons">
-      <button class="btn book-appointment"><i class="fas fa-calendar-alt"></i> Book Appointment</button>
+      <button class="btn book-appointment" id="openModal">Book Appointment</button>
       <button class="btn help"><i class="fas fa-phone-alt"></i> Help? <i class="fas fa-chevron-down"></i></button>
     </div>
   </header>
+
+  <!-- Popup Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2>Book Your Consultation at Clove Dental</h2>
+      <p>Fill out the form below to book your consultation.</p>
+
+      <!-- Form Section -->
+      <h3>Step 1: Personal Details</h3>
+      <form class="modal-form">
+        <div class="input-group">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Mobile" required />
+          <input type="text" placeholder="Enter OTP" required />
+          <button type="button" class="verify-btn">Verify</button>
+        </div>
+        <button type="submit" class="submit-btn">Next</button>
+      </form>
+    </div>
+  </div>
 
   <section class="health-plan">
     <div class="content">
@@ -69,6 +93,12 @@
           <option>Chandigarh</option>
           <option>Chennai</option>
           <option>Delhi</option>
+          <option>Faridabad</option>
+          <option>Ghaziabad</option>
+          <option>Greater Noida</option>
+          <option>Gurgaon</option>
+          <option>Hyderabad</option>
+          <option>Jaipur</option>
         </select>
         <i class="fas fa-chevron-down"></i>
       </div>
@@ -150,10 +180,18 @@
                 <label for="concern">Select Concern</label>
                 <select id="concern">
                     <option>Select Your Concern</option>
-                    <option value="teeth-whitening">Teeth Whitening</option>
-                    <option value="dental-checkup">Dental Checkup</option>
+                    <option value="root-canal">Root Canal</option>
                     <option value="braces">Braces</option>
-                    <option value="other">Other</option>
+                    <option value="teeth-whitening">Teeth Whitening</option>
+                    <option value="invisible-braces">Invisible Braces</option>
+                    <option value="kids-dentistry">Kids Dentistry</option>
+                    <option value="crowns-bridges">Crown & Bridges</option>
+                    <option value="dental-checkup">Dental Checkup</option>
+                    <option value="smile-makeover">Smile Makeover</option>
+                    <option value="gum-treatment">Gum Treatment</option>
+                    <option value="wisdom-tooth">Wisdom Tooth/option>
+                    <option value="laser-dentistry">Laser Dentistry</option>
+                    <option value="dentures">Dentures</option>
                 </select>
             </div>
             <button class="button">Book A Free Consultation</button>
@@ -542,7 +580,29 @@
     </section>
     <footer>
       All Rights Reserved - 2024, Clove Dental (a brand name of M/s. Star Dental Centre Private Limited)
-    </footer>    
+    </footer>
+    
+    <script>
+      const openModal = document.getElementById('openModal');
+      const closeModal = document.getElementById('closeModal');
+      const modal = document.getElementById('modal');
+    
+      openModal.onclick = function() {
+        modal.style.display = "flex";
+      }
+    
+      closeModal.onclick = function() {
+        modal.style.display = "none";
+      }
+    
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+    
+
 </body>
 </html>
 

@@ -221,6 +221,7 @@ body {
   }
 }
 
+
 /* Health Plan section styles */
 .health-plan {
   display: flex;
@@ -1821,5 +1822,100 @@ footer {
   .social  {
     justify-content: center;
     cursor: pointer;
+  }
+}
+
+
+/* Popup Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  text-align: center;
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+h2, h3 {
+  color: #333;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Form Styling */
+.modal-form {
+  margin-top: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.verify-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  .input-group {
+    flex-direction: column;
   }
 }
