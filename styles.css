@@ -123,7 +123,7 @@ body {
     padding: 15px;
   }
 
-  .logo{
+  .logo {
     margin-bottom: 10px;
   }
 
@@ -137,7 +137,7 @@ body {
 
   .nav ul {
     flex-direction: column; /* Stack navigation items in a column */
-    gap: 10px;
+    gap: 2px; /* Reduced the gap between nav items to 5px */
     padding: 15px 0;
     display: block; /* Ensure nav items are displayed */
     text-align: center; /* Center align nav items */
@@ -158,19 +158,21 @@ body {
   .nav ul li:not(:last-child)::after {
     content: '';
   }
-  
 
   .action-buttons {
     width: 100%;
     justify-content: center; /* Center align action buttons */
     margin-top: 10px;
     gap: 15px;
-    text-align: center;
   }
 
   .btn {
     padding: 8px 15px;
     font-size: 14px;
+    display: flex; /* Ensures button content is centered */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    text-align: center;
   }
 }
 
@@ -182,7 +184,7 @@ body {
 
   .nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 2px; /* Reduced the gap between nav items to 5px */
     text-align: center; /* Ensure items are centered on mobile */
     display: block;
   }
@@ -208,6 +210,10 @@ body {
   .btn {
     width: 100%;
     padding: 10px;
+    display: flex; /* Ensures button content is centered */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    text-align: center;
   }
 }
 
