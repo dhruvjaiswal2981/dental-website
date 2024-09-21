@@ -123,6 +123,10 @@ body {
     padding: 15px;
   }
 
+  .logo{
+    margin-bottom: 10px;
+  }
+
   .logo-text {
     font-size: 35px;
   }
@@ -140,7 +144,6 @@ body {
   }
 
   .nav ul li {
-    padding: 10px 0;
     width: 100%; /* Ensure each item takes full width */
   }
 
@@ -162,12 +165,12 @@ body {
     justify-content: center; /* Center align action buttons */
     margin-top: 10px;
     gap: 15px;
+    text-align: center;
   }
 
   .btn {
     padding: 8px 15px;
     font-size: 14px;
-    text-align: center;
   }
 }
 
