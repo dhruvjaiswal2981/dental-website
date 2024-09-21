@@ -146,6 +146,9 @@ body {
     width: 100%; /* Ensure each item takes full width */
   }
 
+  /* Remove gap between "Treatments" and "Dental Plans", "Careers" and "Find a Clinic" */
+  
+
   .nav ul li a {
     font-size: 20px;
     font-weight: 600;
@@ -186,6 +189,9 @@ body {
     text-align: center; /* Ensure items are centered on mobile */
     display: block;
   }
+
+  
+  
 
   .nav ul li {
     width: 100%;
